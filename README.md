@@ -116,6 +116,25 @@ python scripts/SandboxZoneEditor.py
 5. **Deploy** — drop the triplet into
    `<game>\Moria\Content\Paks\WorldGenMod\` and launch the game.
 
+## Syncing from the parent project
+
+Active development happens in the
+[Moria-Replication](https://github.com/jbowensii/Moria-Replication) parent
+repo. Use `sync.py` to pull the latest editor source into this repo:
+
+```bash
+python sync.py            # sync editor + helpers from parent
+python sync.py --dry-run  # preview changes without copying
+python sync.py --parent C:\Path\To\Moria-Replication  # custom path
+```
+
+The script reads `DEFAULT_MOD_VERSION` from the editor source, copies the
+3 source files (editor, headless validator, stair builder), verifies the
+editor still imports cleanly, and prints suggested commit/tag commands.
+
+It deliberately does **not** auto-commit, modify the `.ini`, or update
+docs — those steps stay in your hands so each release gets proper notes.
+
 ## License
 
 MIT — see [LICENSE](LICENSE).
