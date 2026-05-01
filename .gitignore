@@ -1,0 +1,24 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.idea/
+.vscode/
+*.log
+.DS_Store
+Thumbs.db
+# Editor user state
+scripts/SandboxZoneEditor.local.ini
+# Build outputs
+*.pak
+*.ucas
+*.utoc
+staging/
+# Temporary/transient
+*.tmp
+*.swp
+notify.log
